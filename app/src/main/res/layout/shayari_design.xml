@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="8dp"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="6dp">
+
+    <TextView
+        android:id="@+id/txtShayari"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ुबह का हर पल ज़िंदगी दे आपको,\nदिन का हर लम्हा खुशी दे आपको,\nजहा गम की हवा छू कर भी न गुज़रे,\nखुदा व जन्नत से ज़मीन दे आपको.\nGOOD MONRNING"
+        android:gravity="center"
+        android:layout_margin="10dp"/>
+
+</androidx.cardview.widget.CardView>
