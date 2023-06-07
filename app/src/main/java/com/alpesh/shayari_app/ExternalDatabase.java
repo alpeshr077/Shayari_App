@@ -23,7 +23,7 @@ public class ExternalDatabase extends SQLiteOpenHelper {
     String DB_PATH = "";
 
 
-    public ExternalDatabase(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
+    public ExternalDatabase(@Nullable Context context ) {
         super(context, "Shayari", null, 1);
         context = context;
         this.context = context;
@@ -75,9 +75,9 @@ public class ExternalDatabase extends SQLiteOpenHelper {
 
     public List<ShayriModel> getShayari() {
         List<ShayriModel> modelList = new ArrayList<>();
-        SQLiteDatabase db = getReadableDatabase();
+        SQLiteDatabase dbhelper = getReadableDatabase();
         String que = "SELECT * FROM myShayari";
-        Cursor cursor = db.rawQuery(que,null);
+        Cursor cursor = dbhelper.rawQuery(que,null);
         cursor.moveToFirst();
         for (int i = 0; i < cursor.getCount(); i++) {
             int id = cursor.getInt(0);

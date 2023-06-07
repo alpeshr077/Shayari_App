@@ -15,9 +15,16 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        adapter = ShayariAdapter()
+
+        dbHelper = ExternalDatabase(this)
+        shayarilist= dbHelper.shayari as ArrayList<ShayriModel>
+
+
 
         adapter.setshayari(shayarilist)
 
@@ -25,4 +32,5 @@ class MainActivity : AppCompatActivity() {
         binding.rcvListShayari.adapter = adapter
 
     }
+
 }
